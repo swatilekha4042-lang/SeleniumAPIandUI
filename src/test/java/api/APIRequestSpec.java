@@ -17,5 +17,3 @@ public class APIRequestSpec {
         .build();
     }
 }
-
-// .addHeader("X-Reqres-Env","prod")
