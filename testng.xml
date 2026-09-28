@@ -1,0 +1,24 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Selenium Test Suite" parallel="tests" thread-count="3">
+    <!-- <test name="First Selenium Test">
+        <classes>
+            <class name="tests.BingTest"/>
+        </classes>
+    </test>
+    <test name="Second Selenium Test">
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+     <test name="Third Selenium Test">
+        <classes>
+            <class name="tests.qspidersLoginTest"/>
+        </classes>
+    </test> -->
+     <test name="Fourth Selenium Test">
+        <classes>
+            <class name="tests.ProductApiTest"/>
+        </classes>
+    </test>
+</suite>
