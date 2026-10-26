@@ -1,11 +1,15 @@
    package tests;
-   import utils.ConfigReader;
-   import utils.DriverManager;
-
    import org.testng.annotations.BeforeMethod;
    import org.testng.annotations.Test;
 
-   import pages.BingPage;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+import config.ConfigReader;
+import driver.DriverManager;
+import pages.BingPage;
+import reporting.ExtentManager;
+import reporting.ExtentTestManager;
    public class BingTest extends BaseTest{
 
       BingPage bingpage ;
@@ -21,15 +25,9 @@
       @Test 
       public void searchDropdown()
       {
-         bingpage.selectTextInDropdown("testing");
-         try{
-         Thread.sleep(7000);
-         }
-         catch(Exception e)
-         {
-            
-         }
-         
-         
+         ExtentTest test= ExtentTestManager.getTest();
+         test.log(Status.INFO, "Starting search dropdown test");
+
+         bingpage.selectTextInDropdown("testing");     
       }
    }

@@ -8,16 +8,20 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+import config.ConfigReader;
+import driver.DriverManager;
 import listeners.TestListener;
 import pages.qspidersLoginPage;
-import utils.ConfigReader;
-import utils.DriverManager;
+import reporting.ExtentTestManager;
 
 @Listeners(TestListener.class)
 public class qspidersLoginTest extends BaseTest{
 
    qspidersLoginPage qloginPage;
-
+   
     @BeforeMethod 
     public void setUpQspiders()
     {
@@ -30,6 +34,7 @@ public class qspidersLoginTest extends BaseTest{
     @Test (enabled=false)
     public void iFrameLogin()
     {
+         ExtentTestManager.getTest().log(Status.INFO, "Verifying frame login");
         qloginPage.goToIFrames();
         qloginPage.enterDetailsInTheFrame("Swati", "test");
     }
@@ -37,6 +42,7 @@ public class qspidersLoginTest extends BaseTest{
     @Test 
     public void browserWindow()
     {
+        ExtentTestManager.getTest().log(Status.INFO, "Verifying browser window switching");
         qloginPage.switchBrowserWindows();
     }
     

@@ -1,7 +1,7 @@
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Selenium Test Suite" parallel="tests" thread-count="3">
-    <!-- <test name="First Selenium Test">
+    <test name="First Selenium Test">
         <classes>
             <class name="tests.BingTest"/>
         </classes>
@@ -15,7 +15,7 @@
         <classes>
             <class name="tests.qspidersLoginTest"/>
         </classes>
-    </test> -->
+    </test>
      <test name="Fourth Selenium Test">
         <classes>
             <class name="tests.ProductApiTest"/>

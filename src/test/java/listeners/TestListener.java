@@ -10,10 +10,10 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import utils.DriverManager;
+import driver.DriverManager;
+import reporting.ExtentManager;
+import reporting.ExtentTestManager;
 import utils.ScreenshotUtils;
-import utils.ExtentManager;
-import utils.ExtentTestManager;
 
 public class TestListener implements ITestListener{
 

@@ -1,8 +1,8 @@
 package api;
 
+import config.ConfigReader;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
-import utils.ConfigReader;
 
 public class APIRequestSpec {
     

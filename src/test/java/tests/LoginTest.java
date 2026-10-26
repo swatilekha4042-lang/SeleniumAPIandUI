@@ -4,9 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+import config.ConfigReader;
+import driver.DriverManager;
 import pages.LoginPage;
-import utils.ConfigReader;
-import utils.DriverManager;
+import reporting.ExtentTestManager;
 
 public class LoginTest extends BaseTest{
 
@@ -37,6 +41,8 @@ public class LoginTest extends BaseTest{
     @Test(dataProvider = "loginData")
     public void verifyMultipleLogin(String user,String password)
     {
+       ExtentTest test=ExtentTestManager.getTest();
+       test.log(Status.INFO, "Attempt to log in with username and password");
        loginPage.login(user,password);
     }
 
