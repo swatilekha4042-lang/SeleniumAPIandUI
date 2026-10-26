@@ -14,7 +14,9 @@ import pages.LoginPage;
 
         @BeforeMethod
         public void setUp() {
-            WebDriver driver = DriverFactory.createDriver(ConfigReader.get("browser"));
+
+            String browser = System.getProperty("browser",ConfigReader.get("browser"));
+            WebDriver driver = DriverFactory.createDriver(browser);
             DriverManager.setDriver(driver);
         }
 
